@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<l10n>
+    <elements>
+        <e k="design_BigMwMulcher_Block_Title" v="Arbeitsmodus"/>
+        <e k="design_BigMwMulcher_Block_Mower" v="Mäher"/>
+        <e k="design_BigMwMulcher_Block_Mulcher" v="Mulcher"/>
+    </elements>
+</l10n>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="64">
+    <author>Papatim68</author>
+    <author>Larsinator78</author>
+    <version>0.1.0.0</version>
+	<title>
+        <en>Krone BigM450 with stumblechopper</en>
+		<de>Krone BigM450 mit Mulcher</de>
+    </title>
+
+	<description>
+        <de>
+        <![CDATA[Ein Big M 450 umgebaut um auf Mulcher konfigurierbar zu sein.
+        Im shop durch Config Block auf Mulcher umzukonfigurieren.
+
+        Changelog
+        Version 0.1.0.0
+        - Erste Funktionierende Version
+        - Keine veränderungen am Model
+        ]]>   
+        </de>
+	    <en>
+		<![CDATA[A Big M 450 refit to be configureable as a stublechopper aka mulcher.
+        The shop now shows the Option to reconfiger the Mower to do mulchig.
+
+        Changelog
+        Version 0.1.0.0
+        - First release Functional
+        - no Model Changes yet
+        ]]>      
+		</en>
+    </description>
+	    <extraSourceFiles>
+		<sourceFile filename="main.lua"/>
+	</extraSourceFiles>
+	<vehicleTypes>
+            <type name="BigM_w_Mulcher" parent="selfPropelledMower" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+                <specialization name="mulcher"/>
+                <specialization name="selfPropelledMulcher"/>
+            </type>
+    </vehicleTypes>
+	
+    <iconFilename>store_bigM450.dds</iconFilename>
+    <multiplayer supported="true" />
+    <l10n filenamePrefix="translations/translation" />
+    <storeItems>
+        <storeItem xmlFilename="bigM450.xml"/>
+   </storeItems>
+</modDesc>
