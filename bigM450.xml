@@ -361,7 +361,7 @@
         <groundReferenceNode node="bigm450_rightArm_component4" threshold="0.65" />
     </groundReferenceNodes>
 
-	<designConfigurations title="$l10n_design_BigMwMulcher_Block_Title">
+	<!-- <designConfigurations title="$l10n_design_BigMwMulcher_Block_Title">
 		<designConfiguration name="$l10n_design_BigMwMulcher_Block_Mower" price="0">
 			<objectChange node="leftWorkAreaStart" 		translationActive="	1.453	0	1.673"/> 
 			<objectChange node="leftWorkAreaWidth" 		translationActive="	4.995	0	1.673"/> 
@@ -404,25 +404,25 @@
 			<objectChange node="rightWorkAreaWidth01" 	translationActive="-4.995	0	1.673"/> 
 			<objectChange node="rightWorkAreaHeight01" 	translationActive="-1.453	0	1.214"/> 			
         </designConfiguration>		
-    </designConfigurations>
+    </designConfigurations> -->
 
     <workAreas>
         <!-- mower areas -->
-        <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
+        <workArea type="mower" functionName="processMowerMulcherArea" disableBackwards="false" >
             <area startNode="leftWorkAreaStart" widthNode="leftWorkAreaWidth" heightNode="leftWorkAreaHeight" />
             <groundReferenceNode index="1" />
             <folding minLimit="0" maxLimit="0.21" />
             <mower dropWindrow="true" dropAreaIndex="4" />
             <onlyActiveWhenLowered value="false"/>
         </workArea>
-        <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
+        <workArea type="mower" functionName="processMowerMulcherArea" disableBackwards="false" >
             <area startNode="frontWorkAreaStart" widthNode="frontWorkAreaWidth" heightNode="frontWorkAreaHeight" />
             <groundReferenceNode index="2" />
             <folding minLimit="0" maxLimit="0.21" />
             <mower dropWindrow="true" dropAreaIndex="5" />
             <onlyActiveWhenLowered value="false"/>
         </workArea>
-        <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
+        <workArea type="mower" functionName="processMowerMulcherArea" disableBackwards="false" >
             <area startNode="rightWorkAreaStart" widthNode="rightWorkAreaWidth" heightNode="rightWorkAreaHeight" />
             <groundReferenceNode index="3" />
             <folding minLimit="0" maxLimit="0.21" />
@@ -447,19 +447,19 @@
         </workArea>
 		
 		<!--mulcher-->
-		<workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
+		<workArea type="selfPropelledMulcher" functionName="processMowerMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
             <area startNode="leftWorkAreaStart01" widthNode="leftWorkAreaWidth01" heightNode="leftWorkAreaHeight01" />
             <groundReferenceNode index="1" />
             <folding minLimit="0" maxLimit="0.21" />
             <onlyActiveWhenLowered value="true"/>
         </workArea>
-        <workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
+        <workArea type="selfPropelledMulcher" functionName="processMowerMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
             <area startNode="frontWorkAreaStart01" widthNode="frontWorkAreaWidth01" heightNode="frontWorkAreaHeight01" />
             <groundReferenceNode index="2" />
             <folding minLimit="0" maxLimit="0.21" />
             <onlyActiveWhenLowered value="true"/>
         </workArea>
-        <workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
+        <workArea type="selfPropelledMulcher" functionName="processMowerMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
             <area startNode="rightWorkAreaStart01" widthNode="rightWorkAreaWidth01" heightNode="rightWorkAreaHeight01" />
             <groundReferenceNode index="3" />
             <folding minLimit="0" maxLimit="0.21" />
