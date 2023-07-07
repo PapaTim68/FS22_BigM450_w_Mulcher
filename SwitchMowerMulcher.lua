@@ -3,9 +3,9 @@ SwitchMowerMulcher.MOWER = "MOWER"
 SwitchMowerMulcher.MULCHER = "MULCHER"
 
 function SwitchMowerMulcher.initSpecialization()
-    g_configurationManager:addConfigurationType("SwitchMowerMulcher", g_i18n:getText("design_BigMwMulcher_Block_Title"), nil, nil, nil, nil, ConfigurationUtil.SELECTOR_MULTIOPTION)
+    g_configurationManager:addConfigurationType("SwitchMowerMulcher", g_i18n:getText("design_BigMwMulcher_Block_Title"), "SwitchMowerMulcher", nil, nil, nil, ConfigurationUtil.SELECTOR_MULTIOPTION)
 
-    local schemaSavegme = Vehicle.xmlSchemaSavegame
+    local schemaSavegame = Vehicle.xmlSchemaSavegame
     local schemaKey = "SwitchMowerMulcher"
 
     schemaSavegame:register(XMLValueType.STRING, "vehicles.vehicle(?)."..schemaKey.."#mode", "Mower or Mulcher Mode", SwitchMowerMulcher.MOWER)
@@ -21,6 +21,14 @@ end
 
 function SwitchMowerMulcher:onPostLoad(savegame)
     local spec = self.spec_SwitchMowerMulcher
+    if self.configurations["SwitchMowerMulcher"] ~= nil then
+        if self.configurations["SwitchMowerMulcher"] == 1 then
+            spec.useMowerMulcher = SwitchMowerMulcher.MOWER
+        end
+        if self.configurations["SwitchMowerMulcher"] == 2 then
+            spec.useMowerMulcher = SwitchMowerMulcher.MULCHER
+        end
+    end
     if savegame ~= nil then
         local xmlFile = savegame.xmlFile
         local key = savegame.key ..".SwitchMowerMulcher"
@@ -78,8 +86,12 @@ function SwitchMowerMulcher.prerequisitesPresent(specializations)
 	return SpecializationUtil.hasSpecialization(Mulcher, specializations) and SpecializationUtil.hasSpecialization(Mower, specializations)
 end
 
-function SwitchMowerMulcher.registerOverwrittenFunctions(vehicleType)
-    SpecializationUtil.registerOverwrittenFunction(vehicleType,"", SwitchMowerMulcher.)
+-- function SwitchMowerMulcher.registerOverwrittenFunctions(vehicleType)
+--     SpecializationUtil.registerOverwrittenFunction(vehicleType,"", SwitchMowerMulcher.)
+-- end
+
+function SwitchMowerMulcher.registerFunctions(vehicleType)
+    SpecializationUtil.registerFunction(vehicleType, "processMowerMulcherArea", SwitchMowerMulcher.processMowerMulcherArea)
 end
 
 function SwitchMowerMulcher.registerEventListeners(vehicleType)

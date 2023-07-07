@@ -37,6 +37,7 @@
             <type name="BigM_w_Mulcher" parent="selfPropelledMower" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
                 <specialization name="mulcher"/>
                 <specialization name="selfPropelledMulcher"/>
+                <specialization neame="switchMowerMulcher"/>
             </type>
     </vehicleTypes>
 	

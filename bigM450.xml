@@ -373,15 +373,15 @@
 			<objectChange node="rightWorkAreaWidth" 	translationActive="-4.995	0	1.673"/> 
 			<objectChange node="rightWorkAreaHeight" 	translationActive="-1.453	0	1.214"/>
 
-			<objectChange node="leftWorkAreaStart01" 	translationActive="	1.453	3	1.673"/> 
-			<objectChange node="leftWorkAreaWidth01" 	translationActive="	4.995	3	1.673"/> 
-			<objectChange node="leftWorkAreaHeight01" 	translationActive="	1.453	3	1.214"/> 
-			<objectChange node="frontWorkAreaStart01" 	translationActive="-1.654	3	6.262"/> 
-			<objectChange node="frontWorkAreaWidth01" 	translationActive="	1.654	3	6.262"/>
-			<objectChange node="frontWorkAreaHeight01" 	translationActive="-1.654	3	5.803"/>
-			<objectChange node="rightWorkAreaStart01" 	translationActive="-1.453	3	1.673"/> 
-			<objectChange node="rightWorkAreaWidth01" 	translationActive="-4.995	3	1.673"/> 
-			<objectChange node="rightWorkAreaHeight01" 	translationActive="-1.453	3	1.214"/> 			
+			<objectChange node="leftWorkAreaStart01" 	translationActive="	1.453	5.0	1.673"/> 
+			<objectChange node="leftWorkAreaWidth01" 	translationActive="	4.995	5.0	1.673"/> 
+			<objectChange node="leftWorkAreaHeight01" 	translationActive="	1.453	5.0	1.214"/> 
+			<objectChange node="frontWorkAreaStart01" 	translationActive="-1.654	5.0	6.262"/> 
+			<objectChange node="frontWorkAreaWidth01" 	translationActive="	1.654	5.0	6.262"/>
+			<objectChange node="frontWorkAreaHeight01" 	translationActive="-1.654	5.0	5.803"/>
+			<objectChange node="rightWorkAreaStart01" 	translationActive="-1.453	5.0	1.673"/> 
+			<objectChange node="rightWorkAreaWidth01" 	translationActive="-4.995	5.0	1.673"/> 
+			<objectChange node="rightWorkAreaHeight01" 	translationActive="-1.453	5.0	1.214"/> 			
         </designConfiguration>
         <designConfiguration name="$l10n_design_BigMwMulcher_Block_Mulcher" price="10000">			
 			<objectChange node="leftWorkAreaStart" 		translationActive="	1.453	3	1.673"/> 
@@ -392,8 +392,8 @@
 			<objectChange node="frontWorkAreaHeight" 	translationActive="-1.654	3	5.803"/>
 			<objectChange node="rightWorkAreaStart" 	translationActive="-1.453	3	1.673"/> 
 			<objectChange node="rightWorkAreaWidth" 	translationActive="-4.995	3	1.673"/> 
-			<objectChange node="rightWorkAreaHeight" 	translationActive="-1.453	3	1.214"/> 
-			
+			<objectChange node="rightWorkAreaHeight" 	translationActive="-1.453	3	1.214"/>
+		
 			<objectChange node="leftWorkAreaStart01" 	translationActive="	1.453	0	1.673"/> 
 			<objectChange node="leftWorkAreaWidth01" 	translationActive="	4.995	0	1.673"/> 
 			<objectChange node="leftWorkAreaHeight01" 	translationActive="	1.453	0	1.214"/> 
@@ -406,6 +406,12 @@
         </designConfiguration>		
     </designConfigurations> -->
 
+    <SwitchMowerMulcher>
+        <SwitchMowerMulcherConfigurations>
+            <SwitchMowerMulcherConfiguration name="$l10n_design_BigMwMulcher_Block_Mower" mode="MOWER" price="0"/>
+            <SwitchMowerMulcherConfiguration name="$l10n_design_BigMwMulcher_Block_Mulcher" mode="MULCHER" price="10000"/>
+        </SwitchMowerMulcherConfigurations>
+    </SwitchMowerMulcher>
     <workAreas>
         <!-- mower areas -->
         <workArea type="mower" functionName="processMowerMulcherArea" disableBackwards="false" >
