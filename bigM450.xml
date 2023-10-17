@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
-<vehicle type="BigM_w_Mulcher" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
+<vehicle type="baseDrivable" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../shared/xml/schema/vehicle.xsd">
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
@@ -49,6 +49,69 @@
         <schemaOverlay attacherJointPosition="0 0" name="VEHICLE" />
         <mapHotspot type="TRACTOR" />
     </base>
+
+    <configurationSets title="$l10n_design_BigMwMulcher_Block_Title">
+        <configurationSet name="$l10n_design_BigMwMulcher_Block_Mower">
+            <configuration name="vehicleType" index="1"/>
+            <configuration name="workArea" index="1"/>
+            <configuration name="designConfiguration" index="1"/>
+        </configurationSet>
+
+        <configurationSet name="$l10n_design_BigMwMulcher_Block_Mulcher">
+            <configuration name="vehicleType" index="2"/>
+            <configuration name="workArea" index="2"/>
+            <configuration name="designConfiguration" index="2"/>            
+        </configurationSet>
+    </configurationSets>
+    <vehicleTypeConfigurations>
+        <vehicleTypeConfiguration price="0" vehicleType="selfPropelledMower"></vehicleTypeConfiguration>	
+        <vehicleTypeConfiguration price="10000" vehicleType="BigM_w_Mulcher"></vehicleTypeConfiguration>
+    </vehicleTypeConfigurations>
+
+	<designConfigurations>
+		<designConfiguration>
+			<objectChange node="leftWorkAreaStart" 		translationActive="	1.453	0	1.673"/> 
+			<objectChange node="leftWorkAreaWidth" 		translationActive="	4.995	0	1.673"/> 
+			<objectChange node="leftWorkAreaHeight" 	translationActive="	1.453	0	1.214"/> 
+			<objectChange node="frontWorkAreaStart" 	translationActive="-1.654	0	6.262"/> 
+			<objectChange node="frontWorkAreaWidth" 	translationActive="	1.654	0	6.262"/>
+			<objectChange node="frontWorkAreaHeight" 	translationActive="-1.654	0	5.803"/>
+			<objectChange node="rightWorkAreaStart" 	translationActive="-1.453	0	1.673"/> 
+			<objectChange node="rightWorkAreaWidth" 	translationActive="-4.995	0	1.673"/> 
+			<objectChange node="rightWorkAreaHeight" 	translationActive="-1.453	0	1.214"/>
+
+			<objectChange node="leftWorkAreaStart01" 	translationActive="	1.453	3	1.673"/> 
+			<objectChange node="leftWorkAreaWidth01" 	translationActive="	4.995	3	1.673"/> 
+			<objectChange node="leftWorkAreaHeight01" 	translationActive="	1.453	3	1.214"/> 
+			<objectChange node="frontWorkAreaStart01" 	translationActive="-1.654	3	6.262"/> 
+			<objectChange node="frontWorkAreaWidth01" 	translationActive="	1.654	3	6.262"/>
+			<objectChange node="frontWorkAreaHeight01" 	translationActive="-1.654	3	5.803"/>
+			<objectChange node="rightWorkAreaStart01" 	translationActive="-1.453	3	1.673"/> 
+			<objectChange node="rightWorkAreaWidth01" 	translationActive="-4.995	3	1.673"/> 
+			<objectChange node="rightWorkAreaHeight01" 	translationActive="-1.453	3	1.214"/> 			
+        </designConfiguration>
+        <designConfiguration>			
+			<objectChange node="leftWorkAreaStart" 		translationActive="	1.453	3	1.673"/> 
+			<objectChange node="leftWorkAreaWidth" 		translationActive="	4.995	3	1.673"/> 
+			<objectChange node="leftWorkAreaHeight" 	translationActive="	1.453	3	1.214"/> 
+			<objectChange node="frontWorkAreaStart" 	translationActive="-1.654	3	6.262"/> 
+			<objectChange node="frontWorkAreaWidth" 	translationActive="	1.654	3	6.262"/>
+			<objectChange node="frontWorkAreaHeight" 	translationActive="-1.654	3	5.803"/>
+			<objectChange node="rightWorkAreaStart" 	translationActive="-1.453	3	1.673"/> 
+			<objectChange node="rightWorkAreaWidth" 	translationActive="-4.995	3	1.673"/> 
+			<objectChange node="rightWorkAreaHeight" 	translationActive="-1.453	3	1.214"/> 
+			
+			<objectChange node="leftWorkAreaStart01" 	translationActive="	1.453	0	1.673"/> 
+			<objectChange node="leftWorkAreaWidth01" 	translationActive="	4.995	0	1.673"/> 
+			<objectChange node="leftWorkAreaHeight01" 	translationActive="	1.453	0	1.214"/> 
+			<objectChange node="frontWorkAreaStart01" 	translationActive="-1.654	0	6.262"/> 
+			<objectChange node="frontWorkAreaWidth01" 	translationActive="	1.654	0	6.262"/>
+			<objectChange node="frontWorkAreaHeight01" 	translationActive="-1.654	0	5.803"/>
+			<objectChange node="rightWorkAreaStart01" 	translationActive="-1.453	0	1.673"/> 
+			<objectChange node="rightWorkAreaWidth01" 	translationActive="-4.995	0	1.673"/> 
+			<objectChange node="rightWorkAreaHeight01" 	translationActive="-1.453	0	1.214"/> 			
+        </designConfiguration>		
+    </designConfigurations>
 
     <wheels>
         <wheelConfigurations>
@@ -361,110 +424,71 @@
         <groundReferenceNode node="bigm450_rightArm_component4" threshold="0.65" />
     </groundReferenceNodes>
 
-	<designConfigurations title="$l10n_design_BigMwMulcher_Block_Title">
-		<designConfiguration name="$l10n_design_BigMwMulcher_Block_Mower" price="0">
-			<objectChange node="leftWorkAreaStart" 		translationActive="	1.453	0	1.673"/> 
-			<objectChange node="leftWorkAreaWidth" 		translationActive="	4.995	0	1.673"/> 
-			<objectChange node="leftWorkAreaHeight" 	translationActive="	1.453	0	1.214"/> 
-			<objectChange node="frontWorkAreaStart" 	translationActive="-1.654	0	6.262"/> 
-			<objectChange node="frontWorkAreaWidth" 	translationActive="	1.654	0	6.262"/>
-			<objectChange node="frontWorkAreaHeight" 	translationActive="-1.654	0	5.803"/>
-			<objectChange node="rightWorkAreaStart" 	translationActive="-1.453	0	1.673"/> 
-			<objectChange node="rightWorkAreaWidth" 	translationActive="-4.995	0	1.673"/> 
-			<objectChange node="rightWorkAreaHeight" 	translationActive="-1.453	0	1.214"/>
-
-			<objectChange node="leftWorkAreaStart01" 	translationActive="	1.453	3	1.673"/> 
-			<objectChange node="leftWorkAreaWidth01" 	translationActive="	4.995	3	1.673"/> 
-			<objectChange node="leftWorkAreaHeight01" 	translationActive="	1.453	3	1.214"/> 
-			<objectChange node="frontWorkAreaStart01" 	translationActive="-1.654	3	6.262"/> 
-			<objectChange node="frontWorkAreaWidth01" 	translationActive="	1.654	3	6.262"/>
-			<objectChange node="frontWorkAreaHeight01" 	translationActive="-1.654	3	5.803"/>
-			<objectChange node="rightWorkAreaStart01" 	translationActive="-1.453	3	1.673"/> 
-			<objectChange node="rightWorkAreaWidth01" 	translationActive="-4.995	3	1.673"/> 
-			<objectChange node="rightWorkAreaHeight01" 	translationActive="-1.453	3	1.214"/> 			
-        </designConfiguration>
-        <designConfiguration name="$l10n_design_BigMwMulcher_Block_Mulcher" price="10000">			
-			<objectChange node="leftWorkAreaStart" 		translationActive="	1.453	3	1.673"/> 
-			<objectChange node="leftWorkAreaWidth" 		translationActive="	4.995	3	1.673"/> 
-			<objectChange node="leftWorkAreaHeight" 	translationActive="	1.453	3	1.214"/> 
-			<objectChange node="frontWorkAreaStart" 	translationActive="-1.654	3	6.262"/> 
-			<objectChange node="frontWorkAreaWidth" 	translationActive="	1.654	3	6.262"/>
-			<objectChange node="frontWorkAreaHeight" 	translationActive="-1.654	3	5.803"/>
-			<objectChange node="rightWorkAreaStart" 	translationActive="-1.453	3	1.673"/> 
-			<objectChange node="rightWorkAreaWidth" 	translationActive="-4.995	3	1.673"/> 
-			<objectChange node="rightWorkAreaHeight" 	translationActive="-1.453	3	1.214"/> 
-			
-			<objectChange node="leftWorkAreaStart01" 	translationActive="	1.453	0	1.673"/> 
-			<objectChange node="leftWorkAreaWidth01" 	translationActive="	4.995	0	1.673"/> 
-			<objectChange node="leftWorkAreaHeight01" 	translationActive="	1.453	0	1.214"/> 
-			<objectChange node="frontWorkAreaStart01" 	translationActive="-1.654	0	6.262"/> 
-			<objectChange node="frontWorkAreaWidth01" 	translationActive="	1.654	0	6.262"/>
-			<objectChange node="frontWorkAreaHeight01" 	translationActive="-1.654	0	5.803"/>
-			<objectChange node="rightWorkAreaStart01" 	translationActive="-1.453	0	1.673"/> 
-			<objectChange node="rightWorkAreaWidth01" 	translationActive="-4.995	0	1.673"/> 
-			<objectChange node="rightWorkAreaHeight01" 	translationActive="-1.453	0	1.214"/> 			
-        </designConfiguration>		
-    </designConfigurations>
-
     <workAreas>
-        <!-- mower areas -->
-        <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
-            <area startNode="leftWorkAreaStart" widthNode="leftWorkAreaWidth" heightNode="leftWorkAreaHeight" />
-            <groundReferenceNode index="1" />
-            <folding minLimit="0" maxLimit="0.21" />
-            <mower dropWindrow="true" dropAreaIndex="4" />
-            <onlyActiveWhenLowered value="false"/>
-        </workArea>
-        <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
-            <area startNode="frontWorkAreaStart" widthNode="frontWorkAreaWidth" heightNode="frontWorkAreaHeight" />
-            <groundReferenceNode index="2" />
-            <folding minLimit="0" maxLimit="0.21" />
-            <mower dropWindrow="true" dropAreaIndex="5" />
-            <onlyActiveWhenLowered value="false"/>
-        </workArea>
-        <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
-            <area startNode="rightWorkAreaStart" widthNode="rightWorkAreaWidth" heightNode="rightWorkAreaHeight" />
-            <groundReferenceNode index="3" />
-            <folding minLimit="0" maxLimit="0.21" />
-            <mower dropWindrow="true" dropAreaIndex="6" />
-            <onlyActiveWhenLowered value="false"/>
-        </workArea>
+        <workAreaConfigurations>
+            <workAreaConfiguration>	
+                <!-- mower areas -->
+                <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
+                    <area startNode="leftWorkAreaStart" widthNode="leftWorkAreaWidth" heightNode="leftWorkAreaHeight" />
+                    <groundReferenceNode index="1" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <mower dropWindrow="true" dropAreaIndex="4" />
+                    <onlyActiveWhenLowered value="false"/>
+                </workArea>
+                <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
+                    <area startNode="frontWorkAreaStart" widthNode="frontWorkAreaWidth" heightNode="frontWorkAreaHeight" />
+                    <groundReferenceNode index="2" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <mower dropWindrow="true" dropAreaIndex="5" />
+                    <onlyActiveWhenLowered value="false"/>
+                </workArea>
+                <workArea type="mower" functionName="processMowerArea" disableBackwards="false" >
+                    <area startNode="rightWorkAreaStart" widthNode="rightWorkAreaWidth" heightNode="rightWorkAreaHeight" />
+                    <groundReferenceNode index="3" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <mower dropWindrow="true" dropAreaIndex="6" />
+                    <onlyActiveWhenLowered value="false"/>
+                </workArea>
 
-        <!-- dropAreas -->
-        <workArea type="auxiliary" >
-            <area startNode="leftDropAreaStart" widthNode="leftDropAreaWidth" heightNode="leftDropAreaHeight" />
-        </workArea>
-        <workArea type="auxiliary" >
-            <area startNode="frontDropAreaStart" widthNode="frontDropAreaWidth" heightNode="frontDropAreaHeight" />
-        </workArea>
-        <workArea type="auxiliary" >
-            <area startNode="rightDropAreaStart" widthNode="rightDropAreaWidth" heightNode="rightDropAreaHeight" />
-        </workArea>
+                <!-- dropAreas -->
+                <workArea type="auxiliary" >
+                    <area startNode="leftDropAreaStart" widthNode="leftDropAreaWidth" heightNode="leftDropAreaHeight" />
+                </workArea>
+                <workArea type="auxiliary" >
+                    <area startNode="frontDropAreaStart" widthNode="frontDropAreaWidth" heightNode="frontDropAreaHeight" />
+                </workArea>
+                <workArea type="auxiliary" >
+                    <area startNode="rightDropAreaStart" widthNode="rightDropAreaWidth" heightNode="rightDropAreaHeight" />
+                </workArea>
 
-        <!-- swath area -->
-        <workArea type="auxiliary" >
-            <area startNode="swathDropAreaStart" widthNode="swathDropAreaWidth" heightNode="swathDropAreaHeight" />
-        </workArea>
-		
-		<!--mulcher-->
-		<workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
-            <area startNode="leftWorkAreaStart01" widthNode="leftWorkAreaWidth01" heightNode="leftWorkAreaHeight01" />
-            <groundReferenceNode index="1" />
-            <folding minLimit="0" maxLimit="0.21" />
-            <onlyActiveWhenLowered value="true"/>
-        </workArea>
-        <workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
-            <area startNode="frontWorkAreaStart01" widthNode="frontWorkAreaWidth01" heightNode="frontWorkAreaHeight01" />
-            <groundReferenceNode index="2" />
-            <folding minLimit="0" maxLimit="0.21" />
-            <onlyActiveWhenLowered value="true"/>
-        </workArea>
-        <workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
-            <area startNode="rightWorkAreaStart01" widthNode="rightWorkAreaWidth01" heightNode="rightWorkAreaHeight01" />
-            <groundReferenceNode index="3" />
-            <folding minLimit="0" maxLimit="0.21" />
-            <onlyActiveWhenLowered value="true"/>
-        </workArea>
+                <!-- swath area -->
+                <workArea type="auxiliary" >
+                    <area startNode="swathDropAreaStart" widthNode="swathDropAreaWidth" heightNode="swathDropAreaHeight" />
+                </workArea>
+            </workAreaConfiguration>
+
+            <workAreaConfiguration>
+                <!--mulcher-->
+                <workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
+                    <area startNode="leftWorkAreaStart01" widthNode="leftWorkAreaWidth01" heightNode="leftWorkAreaHeight01" />
+                    <groundReferenceNode index="1" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <onlyActiveWhenLowered value="true"/>
+                </workArea>
+                <workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
+                    <area startNode="frontWorkAreaStart01" widthNode="frontWorkAreaWidth01" heightNode="frontWorkAreaHeight01" />
+                    <groundReferenceNode index="2" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <onlyActiveWhenLowered value="true"/>
+                </workArea>
+                <workArea type="selfPropelledMulcher" functionName="processMulcherArea" requiresOwnedFarmland="false" disableBackwards="false" >
+                    <area startNode="rightWorkAreaStart01" widthNode="rightWorkAreaWidth01" heightNode="rightWorkAreaHeight01" />
+                    <groundReferenceNode index="3" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <onlyActiveWhenLowered value="true"/>
+                </workArea>
+            </workAreaConfiguration>
+        </workAreaConfigurations>   
     </workAreas>
 
     <workModes foldMinLimit="0" foldMaxLimit="0.2">
@@ -810,19 +834,19 @@
 
     <mulcher>
         <effects>
-            <effect workAreaIndex="8">
+            <effect workAreaIndex="1">
                 <effectNode effectClass="TypedMotionPathEffect" effectType="MULCHER" linkNode="mowerEffectLeftSwathNode">
                     <motionPathEffect textureFilename="$data/vehicles/dalbo/maxicut600/rollerEffect01Array.dds" numRows="11" rowLength="18" density="0.7"/>
                 </effectNode>
                 <effectNode effectNode="smokeEmitterLeft" effectClass="ParticleEffect" particleType="smoke" materialType="smokeParticle" worldSpace="false" emitCountScale="0.3"/>
             </effect>
-            <effect workAreaIndex="9">
+            <effect workAreaIndex="2">
                 <effectNode effectClass="TypedMotionPathEffect" effectType="MULCHER" linkNode="mowerEffectFrontDropNode">
                     <motionPathEffect textureFilename="$data/vehicles/dalbo/maxicut600/rollerEffect01Array.dds" numRows="11" rowLength="18" density="0.7"/>
                 </effectNode>
                 <effectNode effectNode="smokeEmitterFront" effectClass="ParticleEffect" particleType="smoke" materialType="smokeParticle" worldSpace="false" emitCountScale="0.3"/>
             </effect>
-            <effect workAreaIndex="10">
+            <effect workAreaIndex="3">
                 <effectNode effectClass="TypedMotionPathEffect" effectType="MULCHER" linkNode="mowerEffectRightSwathNode">
                     <motionPathEffect textureFilename="$data/vehicles/dalbo/maxicut600/rollerEffect01Array.dds" numRows="11" rowLength="18" density="0.7"/>
                 </effectNode>

@@ -34,10 +34,23 @@
 		<sourceFile filename="main.lua"/>
 	</extraSourceFiles>
 	<vehicleTypes>
-            <type name="BigM_w_Mulcher" parent="selfPropelledMower" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <type name="BigM_w_Mulcher" parent="baseDrivable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+                <specialization name="groundReference" />
+                <specialization name="workArea" />
+                <specialization name="workParticles" />
+                <specialization name="turnOnVehicle" />
+                <specialization name="powerConsumer" />
+                <specialization name="foldable" />
+                <specialization name="cylinderedFoldable" />
+
+                <specialization name="mulcher" />
+                <specialization name="selfPropelledMulcher" />
+            </type>
+           <!-- <type name="BigM_w_Mulcher" parent="selfPropelledMower" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
                 <specialization name="mulcher"/>
                 <specialization name="selfPropelledMulcher"/>
             </type>
+            -->
     </vehicleTypes>
 	
     <iconFilename>store_bigM450.dds</iconFilename>
