@@ -2,7 +2,7 @@
 <modDesc descVersion="64">
     <author>Papatim68</author>
     <author>Larsinator78</author>
-    <version>0.1.0.0</version>
+    <version>0.2.0.0</version>
 	<title>
         <en>Krone BigM450 with stumblechopper</en>
 		<de>Krone BigM450 mit Mulcher</de>
@@ -26,6 +26,11 @@
         Changelog
         Version 0.1.0.0
         - First release Functional
+        - no Model Changes yet
+        Version 0.2.0.0
+        - Changed Implementation
+        - added Roller
+        - added Grass Roller
         - no Model Changes yet
         ]]>      
 		</en>
