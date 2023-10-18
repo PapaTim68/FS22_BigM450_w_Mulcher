@@ -4,5 +4,7 @@
         <e k="design_BigMwMulcher_Block_Title" v="Work Mode"/>
         <e k="design_BigMwMulcher_Block_Mower" v="Mower"/>
         <e k="design_BigMwMulcher_Block_Mulcher" v="Mulcher"/>
+        <e k="design_BigMwMulcher_Block_Roller" v="Roller"/>
+        <e k="design_BigMwMulcher_Block_Grass_Roller" v="Grass Roller"/>
     </elements>
 </l10n>

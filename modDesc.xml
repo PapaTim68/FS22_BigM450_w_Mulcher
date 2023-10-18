@@ -34,7 +34,7 @@
 		<sourceFile filename="main.lua"/>
 	</extraSourceFiles>
 	<vehicleTypes>
-            <type name="BigM_w_Mulcher" parent="baseDrivable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+            <type name="selfPropelledMulcher" parent="baseDrivable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
                 <specialization name="groundReference" />
                 <specialization name="workArea" />
                 <specialization name="workParticles" />
@@ -44,7 +44,18 @@
                 <specialization name="cylinderedFoldable" />
 
                 <specialization name="mulcher" />
-                <specialization name="selfPropelledMulcher" />
+                <specialization name="selfPropelledMulcherExt" />
+            </type>
+            <type name="selfPropelledRoller" parent="baseDrivable" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
+                <specialization name="groundReference" />
+                <specialization name="workArea" />
+                <specialization name="workParticles" />
+                <!--<specialization name="turnOnVehicle" />-->
+                <specialization name="powerConsumer" />
+                <specialization name="foldable" />
+                <specialization name="cylinderedFoldable" />
+
+                <specialization name="roller" />
             </type>
            <!-- <type name="BigM_w_Mulcher" parent="selfPropelledMower" className="Vehicle" filename="$dataS/scripts/vehicles/Vehicle.lua">
                 <specialization name="mulcher"/>

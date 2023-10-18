@@ -5,7 +5,7 @@ local modName = g_currentModName or "unknown"
 
 ---Init the mod.
 local function init()
-    g_specializationManager:addSpecialization("selfPropelledMulcher", "SelfPropelledMulcher", modDirectory .. "SelfPropelledMulcher.lua", nil)
+    g_specializationManager:addSpecialization("selfPropelledMulcherExt", "SelfPropelledMulcherExt", modDirectory .. "SelfPropelledMulcherExt.lua", nil)
 end
 
 init()

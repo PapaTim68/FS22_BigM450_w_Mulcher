@@ -54,16 +54,30 @@
         <configurationSet name="$l10n_design_BigMwMulcher_Block_Mower">
             <configuration name="vehicleType" index="1"/>
             <configuration name="workArea" index="1"/>
+            <configuration name="roller" index="1" />
         </configurationSet>
 
         <configurationSet name="$l10n_design_BigMwMulcher_Block_Mulcher">
             <configuration name="vehicleType" index="2"/>
-            <configuration name="workArea" index="2"/>        
+            <configuration name="workArea" index="2"/>   
+            <configuration name="roller" index="1" />     
+        </configurationSet>
+        <configurationSet name="$l10n_design_BigMwMulcher_Block_Roller">
+            <configuration name="vehicleType" index="3"/>
+            <configuration name="workArea" index="3"/>
+            <configuration name="roller" index="1" />        
+        </configurationSet>
+        <configurationSet name="$l10n_design_BigMwMulcher_Block_Grass_Roller">
+            <configuration name="vehicleType" index="4"/>
+            <configuration name="workArea" index="3"/>        
+            <configuration name="roller" index="2" />
         </configurationSet>
     </configurationSets>
     <vehicleTypeConfigurations>
-        <vehicleTypeConfiguration price="0" vehicleType="selfPropelledMower"></vehicleTypeConfiguration>	
-        <vehicleTypeConfiguration price="10000" vehicleType="BigM_w_Mulcher"></vehicleTypeConfiguration>
+        <vehicleTypeConfiguration price="0" vehicleType="selfPropelledMower" vehicleName="Big M 450 Mäher"></vehicleTypeConfiguration>	
+        <vehicleTypeConfiguration price="10000" vehicleType="selfPropelledMulcher" vehicleName="Big M 450 Mulcher"></vehicleTypeConfiguration>
+        <vehicleTypeConfiguration price="5000" vehicleType="selfPropelledRoller" vehicleName="Big M 450 Walze"></vehicleTypeConfiguration>
+        <vehicleTypeConfiguration price="5000" vehicleType="selfPropelledRoller" vehicleName="Big M 450 Grass Walze"></vehicleTypeConfiguration>
     </vehicleTypeConfigurations>
 
     <wheels>
@@ -441,6 +455,27 @@
                     <onlyActiveWhenLowered value="true"/>
                 </workArea>
             </workAreaConfiguration>
+            <workAreaConfiguration>
+                <!--roller-->
+                <workArea type="selfPropelledRoller" functionName="processRollerArea" needsSetIsTurnedOn="false" >
+                    <area startNode="leftWorkAreaStart" widthNode="leftWorkAreaWidth" heightNode="leftWorkAreaHeight" />
+                    <groundReferenceNode index="1" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <onlyActiveWhenLowered value="true"/>
+                </workArea>
+                <workArea type="selfPropelledRoller" functionName="processRollerArea" needsSetIsTurnedOn="false">
+                    <area startNode="frontWorkAreaStart" widthNode="frontWorkAreaWidth" heightNode="frontWorkAreaHeight" />
+                    <groundReferenceNode index="2" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <onlyActiveWhenLowered value="true"/>
+                </workArea>
+                <workArea type="selfPropelledRoller" functionName="processRollerArea" needsSetIsTurnedOn="false" >
+                    <area startNode="rightWorkAreaStart" widthNode="rightWorkAreaWidth" heightNode="rightWorkAreaHeight" />
+                    <groundReferenceNode index="3" />
+                    <folding minLimit="0" maxLimit="0.21" />
+                    <onlyActiveWhenLowered value="true"/>
+                </workArea>
+            </workAreaConfiguration>
         </workAreaConfigurations>   
     </workAreas>
 
@@ -810,6 +845,23 @@
             <work template="crushingStubbles" linkNode="bigm450_main_component1" fadeIn="0.2" pitchScale="0.8"/>
         </sounds>
     </mulcher>
+
+	<roller>
+		<rollerConfigurations>
+			<rollerConfiguration>
+				<roller onlyActiveWhenLowered="true" isSoilRoller="true"/>
+				<sounds>
+					<work template="MEADOW_ROLLER_WORK" />
+				</sounds>
+			</rollerConfiguration>
+			<rollerConfiguration>
+				<roller onlyActiveWhenLowered="true" isGrassRoller="true"/>
+				<sounds>
+					<work template="MEADOW_ROLLER_WORK" />
+				</sounds>
+			</rollerConfiguration>
+		</rollerConfigurations>
+	</roller>
 
     <windBending>
         <windBendingNodes>
